@@ -18,38 +18,32 @@
 			<div class="form-group">
 				<label for="inputId" class="col-sm-2 control-label">아이디</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="inputId"
-						placeholder="아이디">
+					<input type="text" class="form-control" id="inputId" name="uid" placeholder="아이디">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputPassword" class="col-sm-2 control-label">비밀번호</label>
 				<div class="col-sm-6">
-					<input type="password" class="form-control" id="inputPassword"
-						placeholder="비밀번호">
+					<input type="password" class="form-control" id="inputPassword" name="upw" placeholder="비밀번호">
 				</div>
 			</div>
 			<div class="form-group">
-				<label for="inputPasswordCheck" class="col-sm-2 control-label">비밀번호
-					확인</label>
+				<label for="inputPasswordCheck" class="col-sm-2 control-label">비밀번호 확인</label>
 				<div class="col-sm-6">
-					<input type="password" class="form-control" id="inputPasswordCheck"
-						placeholder="비밀번호 확인">
+					<input type="password" class="form-control" id="inputPasswordCheck" placeholder="비밀번호 확인">
 					<p class="help-block">비밀번호를 한번 더 입력해주세요.</p>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputName" class="col-sm-2 control-label">이름</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="inputName"
-						placeholder="이름">
+					<input type="text" class="form-control" id="inputName" name="uname" placeholder="이름">
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="inputmobileNumber" class="col-sm-2 control-label">휴대폰번호</label>
 				<div class="col-sm-6">
-					<input type="text" class="form-control" id="inputmobileNumber"
-						placeholder="휴대폰번호">
+					<input type="text" class="form-control" id="inputmobileNumber" name="uphonenum" placeholder="휴대폰번호">
 					<p class="help-block">- 없이 적어주세요.</p>
 				</div>
 			</div>

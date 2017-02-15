@@ -1,5 +1,9 @@
 package org.hyucs.controll;
 
+import javax.inject.Inject;
+
+import org.hyucs.domain.UserVO;
+import org.hyucs.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -10,6 +14,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/user/*")
 public class UserController {
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+	
+	@Inject
+	private UserService uservice;
 	
 	@RequestMapping(value="login", method=RequestMethod.GET)
 	public void loginGET() {
@@ -22,8 +29,8 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="regist", method=RequestMethod.POST)
-	public void registrationPOST() {
-		
+	public void registrationPOST(UserVO uvo) throws Exception {
+		uservice.registUser(uvo);
 	}
 
 }

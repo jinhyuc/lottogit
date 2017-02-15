@@ -7,6 +7,11 @@ create table tbl_user (
     primary key(uid)
 );
 
+select * from tbl_user;
+
+delete from tbl_user
+where uid='hyucs21';
+
 alter table tbl_user add column
 sessionkey varchar(100) not null default 'none';
 
