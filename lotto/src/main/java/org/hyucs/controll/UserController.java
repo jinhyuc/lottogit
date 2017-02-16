@@ -29,8 +29,10 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="regist", method=RequestMethod.POST)
-	public void registrationPOST(UserVO uvo) throws Exception {
+	public String registrationPOST(UserVO uvo) throws Exception {
 		uservice.registUser(uvo);
+		
+		return "redirect:/";
 	}
 
 }
