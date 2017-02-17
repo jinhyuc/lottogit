@@ -16,6 +16,7 @@
 <link href="/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 <link href="/resources/stylesheets/userregist.css" rel="stylesheet">
+<link href="/resources/stylesheets/lottonumber.css" rel="stylesheet">
 
 </head>
 <body>
@@ -133,7 +134,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="home.jsp">로또 - by Jinhyuc</a>
+			<a class="navbar-brand" href="/">로또 - by Jinhyuc</a>
 		</div>
 		<!-- /.navbar-header -->
 
@@ -224,7 +225,7 @@
 								<a href="#">회차별 당첨번호</a>
 							</li>
 							<li>
-								<a href="#">LOTTO 판매점</a>
+								<a href="/info/store">LOTTO 판매점</a>
 							</li>
 						</ul>
 						<!-- /.nav-second-level -->

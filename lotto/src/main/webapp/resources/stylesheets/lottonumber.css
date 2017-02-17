@@ -1,0 +1,98 @@
+@CHARSET "UTF-8";
+
+@charset "utf-8";
+/* Incomms WS UI Part KHS 140307 */
+
+/* 상단 회차정보 */
+.cs_lotto{clear:both;position:relative;width:590px;margin:5px 0 0 10px}
+.cs_lotto a:hover{text-decoration:underline}
+.cs_lotto .lotto_wrap{position:relative;z-index:10;border:6px solid #f4f4f5;background-color:#fbfbfb}
+.cs_lotto .lotto_tit{overflow:hidden;height:39px;padding:0 3px;border-bottom:1px solid #ededed;background-color:#fff}
+.cs_lotto .lotto_tit .prev,.cs_lotto .lotto_tit .next{display:block;overflow:hidden;width:32px;height:34px;margin-top:3px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/lotto/img/img_lst.png) no-repeat -36px -98px;line-height:100px;text-indent:-1000px}
+.cs_lotto .lotto_tit .prev{float:left;background-position:12px 9px}
+.cs_lotto .lotto_tit .prev.off{background-position:-16px 9px;cursor:default}
+.cs_lotto .lotto_tit .next{float:right;background-position:12px -26px}
+.cs_lotto .lotto_tit .next.off{background-position:-16px -26px;cursor:default}
+.cs_lotto .lotto_tit h3{float:left;clear:none;margin:11px 0 0 140px;line-height:18px;font-weight:bold;font-size:14px;font-family:'돋움',dotum,Helvetica,sans-serif}
+.cs_lotto .lotto_tit h3 a{padding-right:15px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/lotto/img/img_lst.png) no-repeat 100% -65px;color:#444;text-decoration:none}
+.cs_lotto .lotto_tit h3 a:hover{text-decoration:none}
+.cs_lotto .lotto_tit h3 a.on{background-position:100% -89px}
+.cs_lotto .lotto_tit h3 em{color:#f00}
+.cs_lotto .lotto_tit h3 span{color:#777}
+
+/* 회차별 당첨번호 리스트 */
+.cs_lotto .slc_ly{overflow:auto;position:absolute;top:32px;left:169px;z-index:10;width:248px;height:177px;border:1px solid #dbdede;background-color:#fff}
+.cs_lotto .slc_ly h4{overflow:hidden;position:absolute;top:-100px;left:-100px;width:1px;height:1px;line-height:100px;text-indent:-1000px}
+.cs_lotto .slc_ly li{font-size:12px;line-height:22px}
+.cs_lotto .slc_ly li.on{font-weight:bold}
+.cs_lotto .slc_ly li:first-child a{padding-top:1px}
+.cs_lotto .slc_ly li a{display:block;padding-left:5px;color:#000;text-decoration:none}
+.cs_lotto .slc_ly li a:hover{background-color:#e2ebf5;text-decoration:none}
+
+/* 당첨번호 */
+.cs_lotto .num_box{overflow:hidden;height:54px;padding:19px 0 0 54px}
+.cs_lotto .num_box .num{display:block;overflow:hidden;float:left;width:33px;height:33px;margin-left:10px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/lotto/img/num_lst.png) no-repeat -420px -205px;line-height:100px;text-indent:-1000px}
+.cs_lotto .num_box .num:first-child{margin-left:6px}
+.cs_lotto .num_box .num.ball1{background-position:0 0}
+.cs_lotto .num_box .num.ball2{background-position:-43px 0}
+.cs_lotto .num_box .num.ball3{background-position:-86px 0}
+.cs_lotto .num_box .num.ball4{background-position:-129px 0}
+.cs_lotto .num_box .num.ball5{background-position:-172px 0}
+.cs_lotto .num_box .num.ball6{background-position:-215px 0}
+.cs_lotto .num_box .num.ball7{background-position:-258px 0}
+.cs_lotto .num_box .num.ball8{background-position:-301px 0}
+.cs_lotto .num_box .num.ball9{background-position:-344px 0}
+.cs_lotto .num_box .num.ball10{background-position:-387px 0}
+.cs_lotto .num_box .num.ball11{background-position:0 -43px}
+.cs_lotto .num_box .num.ball12{background-position:-43px -43px}
+.cs_lotto .num_box .num.ball13{background-position:-86px -43px}
+.cs_lotto .num_box .num.ball14{background-position:-129px -43px}
+.cs_lotto .num_box .num.ball15{background-position:-172px -43px}
+.cs_lotto .num_box .num.ball16{background-position:-215px -43px}
+.cs_lotto .num_box .num.ball17{background-position:-258px -43px}
+.cs_lotto .num_box .num.ball18{background-position:-301px -43px}
+.cs_lotto .num_box .num.ball19{background-position:-344px -43px}
+.cs_lotto .num_box .num.ball20{background-position:-387px -43px}
+.cs_lotto .num_box .num.ball21{background-position:0 -86px}
+.cs_lotto .num_box .num.ball22{background-position:-43px -86px}
+.cs_lotto .num_box .num.ball23{background-position:-86px -86px}
+.cs_lotto .num_box .num.ball24{background-position:-129px -86px}
+.cs_lotto .num_box .num.ball25{background-position:-172px -86px}
+.cs_lotto .num_box .num.ball26{background-position:-215px -86px}
+.cs_lotto .num_box .num.ball27{background-position:-258px -86px}
+.cs_lotto .num_box .num.ball28{background-position:-301px -86px}
+.cs_lotto .num_box .num.ball29{background-position:-344px -86px}
+.cs_lotto .num_box .num.ball30{background-position:-387px -86px}
+.cs_lotto .num_box .num.ball31{background-position:0 -129px}
+.cs_lotto .num_box .num.ball32{background-position:-43px -129px}
+.cs_lotto .num_box .num.ball33{background-position:-86px -129px}
+.cs_lotto .num_box .num.ball34{background-position:-129px -129px}
+.cs_lotto .num_box .num.ball35{background-position:-172px -129px}
+.cs_lotto .num_box .num.ball36{background-position:-215px -129px}
+.cs_lotto .num_box .num.ball37{background-position:-258px -129px}
+.cs_lotto .num_box .num.ball38{background-position:-301px -129px}
+.cs_lotto .num_box .num.ball39{background-position:-344px -129px}
+.cs_lotto .num_box .num.ball40{background-position:-387px -129px}
+.cs_lotto .num_box .num.ball41{background-position:0 -172px}
+.cs_lotto .num_box .num.ball42{background-position:-43px -172px}
+.cs_lotto .num_box .num.ball43{background-position:-86px -172px}
+.cs_lotto .num_box .num.ball44{background-position:-129px -172px}
+.cs_lotto .num_box .num.ball45{background-position:-172px -172px}
+.cs_lotto .num_box .bonus{display:block;float:left;margin-top:12px;margin-left:7px;padding-left:14px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/lotto/img/num_lst.png) no-repeat -227px -183px;font-size:12px;color:#949494;letter-spacing:-1px}
+.cs_lotto .num_box .bonus + .num{margin-left:4px}
+.cs_lotto .num_box .btn_num{display:block;overflow:hidden;float:left;width:85px;height:20px;margin:6px 0 0 10px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/lotto/img/num_lst.png) no-repeat -335px -185px;line-height:100px;text-indent:-100px}
+
+/* 안내문구 */
+.cs_lotto .info{position:relative;margin:7px 0 6px;padding:3px 0 8px 20px;_padding:4px 0 7px 20px;background:url(https://ssl.pstatic.net/sstatic/keypage/weather/ico_info.gif) 0 3px no-repeat;font-size:11px;line-height:17px;font-family:'돋움',Dotum,AppleGothic,sans-serif;color:#989898;letter-spacing:-1px;zoom:1}
+.cs_lotto .info a{text-decoration:none}
+.cs_lotto .info a:hover{text-decoration:underline}
+.cs_lotto .info .lk_more{position:absolute;top:1px;right:0;font-size:12px;color:#777;text-decoration:underline}
+
+/* 관련정보 */
+.cs_lotto .other_lk{padding-top:6px;border-top:1px solid #f0f0f1;font-size:12px;line-height:20px}
+.cs_lotto .other_lk dt{float:left;clear:both;margin-right:4px;font-weight:bold;color:#444}
+.cs_lotto .other_lk dd{overflow:hidden}
+.cs_lotto .other_lk dd a{margin-left:-1px;padding:0 8px 0 9px;background:url(https://ssl.pstatic.net/sstatic/keypage/outside/uio/img/bg_sep.gif) 0 0 no-repeat}
+
+/* 상단 라인 배너 */
+.cs_lotto .bnr_line{position:absolute;top:-36px;right:0;width:590px;height:36px;text-align:right;vertical-align:top}
