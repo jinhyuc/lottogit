@@ -123,6 +123,11 @@
 <!-- Custom Theme JavaScript -->
 <script src="/resources/vendor/sbadmin/js/sb-admin-2.js"></script>
 
+<!-- DataTables JavaScript -->
+<script src="/resources/vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/resources/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+<script src="/resources/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
 <div id="wrapper">
 
 	<!-- Navigation -->
