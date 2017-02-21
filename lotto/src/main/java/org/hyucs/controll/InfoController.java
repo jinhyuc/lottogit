@@ -33,7 +33,7 @@ public class InfoController {
 		ResponseEntity<Map<String, Object>> entity = null;
 
 	    String text = URLEncoder.encode("로또판매점", "UTF-8");
-	    String apiURL = "https://openapi.naver.com/v1/search/local.json?query="+ text;
+	    String apiURL = "https://openapi.naver.com/v1/search/local.json?query="+ text + "&display=100";
 	    String strResult = NaverOpenAPI.searchLOC(apiURL);
 	    
 	    logger.info(strResult);

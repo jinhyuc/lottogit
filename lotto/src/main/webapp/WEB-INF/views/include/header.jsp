@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="http://code.jquery.com/jquery.js"></script>
 <title>Lotto Home</title>
 
 <!-- Bootstrap Core CSS -->
@@ -261,6 +262,18 @@
 							</li>
 							<li>
 								<a href="#">질문게시판</a>
+							</li>
+						</ul>
+						<!-- /.nav-second-level -->
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-user fa-fw"></i> 관리자메뉴
+							<span class="fa arrow"></span>
+						</a>
+						<ul class="nav nav-second-level">
+							<li>
+								<a href="/admin/store">판매점 검색 및 등록</a>
 							</li>
 						</ul>
 						<!-- /.nav-second-level -->

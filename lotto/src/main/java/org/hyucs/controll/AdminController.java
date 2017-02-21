@@ -31,13 +31,13 @@ public class AdminController {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value="storelist/{page}/{keyword}", method=RequestMethod.GET, produces="application/JSON;charset=UTF-8")
-	public ResponseEntity<Map<String, Object>> storeListGET(@PathVariable("page") String page, @PathVariable("keyword") String keyword) throws Exception {
+	@RequestMapping(value="storelist/{page}/{keyword}/{display}", method=RequestMethod.GET, produces="application/JSON;charset=UTF-8")
+	public ResponseEntity<Map<String, Object>> storeListGET(@PathVariable("page") String page, @PathVariable("keyword") String keyword, @PathVariable("display") String display) throws Exception {
 		Criteria cri = new Criteria();
 		cri.setPage(Integer.parseInt(page));
 		Integer start = cri.getPageStart() + 1;
 		String text = URLEncoder.encode(keyword, "UTF-8");
-		String apiURL = "https://openapi.naver.com/v1/search/local.json?query=" + text + "&start=" + start;
+		String apiURL = "https://openapi.naver.com/v1/search/local.json?query=" + text + "&start=" + start + "&display=" + display;
 		String strResult = NaverOpenAPI.searchLOC(apiURL);
 		
 		JSONParser parser = new JSONParser();
