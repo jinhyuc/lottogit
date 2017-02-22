@@ -3,6 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script src="http://code.jquery.com/jquery.js"></script>
 <title>Lotto Home</title>
@@ -15,6 +16,10 @@
 <link href="/resources/vendor/sbadmin/css/sb-admin-2.css" rel="stylesheet">
 <!-- Custom Fonts -->
 <link href="/resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<!-- DataTables CSS -->
+<link href="/resources/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+<!-- DataTables Responsive CSS -->
+<link href="/resources/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
 
 <link href="/resources/stylesheets/userregist.css" rel="stylesheet">
 <link href="/resources/stylesheets/lottonumber.css" rel="stylesheet">
