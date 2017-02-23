@@ -19,4 +19,9 @@
 		delete from tbl_store
 		where storeid=#{storeid}
 	</delete>
+	
+	<update id="modify">
+		update tbl_store set title=#{title}, link=#{link}, category=#{category}, description=#{description}, telephone=#{telephone}, address=#{address}, roadAddress=#{roadAddress}, lat=#{lat}, lon=#{lon}, wcount1=#{wcount1}, wcount2=#{wcount2}
+		where storeid=#{storeid} 
+	</update>
 </mapper>

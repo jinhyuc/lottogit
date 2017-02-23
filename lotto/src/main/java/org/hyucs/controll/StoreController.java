@@ -55,5 +55,20 @@ public class StoreController {
 		}
 		return entity;
 	}
-
+	
+	@RequestMapping(value="/upd/{storeid}", method={RequestMethod.PUT, RequestMethod.PATCH})
+	public ResponseEntity<String> update(@PathVariable("storeid") int storeid, @RequestBody StoreVO svo) {
+		ResponseEntity<String> entity = null;
+		
+		try {
+			svo.setStoreid(storeid);
+			service.update(svo);
+			
+			entity = new ResponseEntity<String>("SUCCESS", HttpStatus.OK);
+		} catch(Exception e) {
+			e.printStackTrace();
+			entity = new ResponseEntity<String>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+		return entity;
+	}
 }

@@ -29,4 +29,9 @@ public class StoreServiceImpl implements StoreService {
 		sdao.remove(storeid);
 	}
 
+	@Override
+	public void update(StoreVO svo) throws Exception {
+		sdao.update(svo);
+	}
+
 }

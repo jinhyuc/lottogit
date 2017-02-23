@@ -11,4 +11,6 @@ public interface StoreDAO {
 	
 	public void remove(int storeid) throws Exception;
 	
+	public void update(StoreVO svo) throws Exception;
+	
 }

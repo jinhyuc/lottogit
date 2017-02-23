@@ -65,34 +65,168 @@
 											<h4 class="modal-title" id="detailModalLabel"></h4>
 										</div>
 										<div class="modal-body">
-											<label for="store_id">번호</label>
-											<input type="text" id="store_id" class="form-control" readonly="readonly">
-											<label for="store_title">판매점명</label>
-											<input type="text" id="store_title" class="form-control" readonly="readonly">
-											<label for="store_link">링크</label>
-											<input type="text" id="store_link" class="form-control" readonly="readonly">
-											<label for="store_category">분류</label>
-											<input type="text" id="store_category" class="form-control" readonly="readonly">
-											<label for="store_desc">설명</label>
-											<input type="text" id="store_desc" class="form-control" readonly="readonly">
-											<label for="store_tel">전화번호</label>
-											<input type="text" id="store_tel" class="form-control" readonly="readonly">
-											<label for="store_addr">주소</label>
-											<input type="text" id="store_addr" class="form-control" readonly="readonly">
-											<label for="store_raddr">도로명 주소</label>
-											<input type="text" id="store_raddr" class="form-control" readonly="readonly">
-											<label for="store_lat">위치</label>
-											<div class="form-group input-group col-lg-4" >												
-												<input type="text" id="store_lat" class="form-control" readonly="readonly">
-											</div>
-											<div class="form-group input-group col-lg-4" >
-												<input type="text" id="store_lon" class="form-control" readonly="readonly">
+											<div class="container-fluid">
+												<div class="form-group row"> 
+	 												<label for="store_id" class="col-lg-2">번호</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_id" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_title" class="col-lg-2">판매점명</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_title" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_link" class="col-lg-2">링크</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_link" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_category" class="col-lg-2">분류</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_category" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_desc" class="col-lg-2">설명</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_desc" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_tel" class="col-lg-2">전화번호</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_tel" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_addr" class="col-lg-2">주소</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_addr" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_raddr" class="col-lg-2">도로명 주소</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_raddr" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_lat" class="col-lg-2">MapX</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_lat" class="form-control" readonly="readonly">
+													</div>
+	 												<label for="store_lon" class="col-lg-2">MapY</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_lon" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_wcount1" class="col-lg-2">1등횟수</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_wcount1" class="form-control" readonly="readonly">
+													</div>
+	 												<label for="store_wcount2" class="col-lg-2">2등횟수</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_wcount2" class="form-control" readonly="readonly">
+													</div>
+												</div>
 											</div>
 										</div>
 										<div class="modal-footer">
-											<button type="button" class="btn btn-info" id="replyModBtn">수정</button>
-											<button type="button" class="btn btn-danger" id="replyDelBtn">삭제</button>
+											<button type="button" class="btn btn-info" id="storeModBtn">수정</button>
+											<button type="button" class="btn btn-danger" id="storeDelBtn">삭제</button>
 											<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Modify Modal -->
+							<div class="modal fade" id="modifyModal" tabindex="-1" role="dialog" aria-labelledby="modifyModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+											<h4 class="modal-title" id="modifyModalLabel"></h4>
+										</div>
+										<div class="modal-body">
+											<div class="container-fluid">
+												<div class="form-group row"> 
+	 												<label for="store_id" class="col-lg-2">번호</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_id_m" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_title" class="col-lg-2">판매점명</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_title_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_link" class="col-lg-2">링크</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_link_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_category" class="col-lg-2">분류</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_category_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_desc" class="col-lg-2">설명</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_desc_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_tel" class="col-lg-2">전화번호</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_tel_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_addr" class="col-lg-2">주소</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_addr_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_raddr" class="col-lg-2">도로명 주소</label>
+													<div class="col-lg-10">
+														<input type="text" id="store_raddr_m" class="form-control">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_lat" class="col-lg-2">MapX</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_lat_m" class="form-control" readonly="readonly">
+													</div>
+	 												<label for="store_lon" class="col-lg-2">MapY</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_lon_m" class="form-control" readonly="readonly">
+													</div>
+												</div>
+												<div class="form-group row"> 
+	 												<label for="store_wcount1" class="col-lg-2">1등횟수</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_wcount1_m" class="form-control">
+													</div>
+	 												<label for="store_wcount2" class="col-lg-2">2등횟수</label>
+													<div class="col-lg-4">
+														<input type="text" id="store_wcount2_m" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-success" id="storeSaveBtn">저장</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
 										</div>
 									</div>
 								</div>
@@ -119,33 +253,6 @@ $(document).ready(function() {
 $("#searchBtn").on("click", function() {
 	getStoreList_Naver(1);
 });
-
-function moveMap(mapx, mapy) {
-	var point = new naver.maps.Point(mapx, mapy);
-	var center = naver.maps.TM128Coord.fromCoordToLatLng(point);
-	var mapOptions = {
-			scaleControl : false,
-			logoControl : false,
-			mapDataControl : false,
-			zoomControl : true,
-		    center: center		    
-		};
-
-	var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
-	
-	var markerOptions = {
-		position: center,
-		map: map,
-		    icon: {
-		        url: '/resources/dist/img/pin_default.png',
-		        size: new naver.maps.Size(22, 35),
-		        origin: new naver.maps.Point(0, 0),
-		        anchor: new naver.maps.Point(11, 35)
-		}
-	};
-
-	var marker = new naver.maps.Marker(markerOptions);
-}
 
 $("#storelist_naver").on("click", ".storeMapTd", function() {
 	var title = $(this).parent().attr("data-title");
@@ -198,8 +305,8 @@ $("#storelist_naver").on("click", ".storeAddTd", function() {
 
 $("#storelist_db").on("click", ".storeMapTd", function() {
 	var title = $(this).parent().attr("data-title");
-	var mapx = $(this).parent().attr("data-mapx");
-	var mapy = $(this).parent().attr("data-mapy");
+	var mapx = $(this).parent().attr("data-lat");
+	var mapy = $(this).parent().attr("data-lon");
 	
 	$("#mapModalLabel").html(title);
 	moveMap(mapx, mapy);
@@ -224,6 +331,168 @@ $("#storelist_db").on("click", ".storeDelTd", function() {
 		}
 	});
 });
+
+$("#storeDelBtn").on("click", function() {
+	var id = $("#store_id").val();
+	
+	$.ajax({
+		type: "delete",
+		url: "/stores/del/" + id,
+		headers: {
+			"Content-Type": "application/json",
+			"X-HTTP-Method-Override": "DELETE" },
+		dataType: "text",
+		success:function(result) {
+			console.log("result: " + result);
+			if(result == "SUCCESS") {
+				$("#detailModal").modal('hide');
+				alert("삭제 되었습니다.");
+				getStoreList_DB();
+			}
+		}
+	});
+});
+
+$("#storelist_db").on("click", ".storeIdTd", function() {
+	var storeid = $(this).parent().attr("data-storeid");
+	var title = $(this).parent().attr("data-title");
+	var link = $(this).parent().attr("data-link");
+	var category = $(this).parent().attr("data-category");
+	var desc = $(this).parent().attr("data-desc");
+	var telephone = $(this).parent().attr("data-telephone");
+	var address = $(this).parent().attr("data-address");
+	var roadaddr = $(this).parent().attr("data-roadaddr");
+	var lat = $(this).parent().attr("data-lat");
+	var lon = $(this).parent().attr("data-lon");
+	var wcount1 = $(this).parent().attr("data-wcount1");
+	var wcount2 = $(this).parent().attr("data-wcount2");
+	
+	$("#detailModalLabel").html("<b>[" + storeid + " - " + title + "]</b>");
+	
+	$("#store_id").val(storeid);
+	$("#store_title").val(title);
+	$("#store_link").val(link);
+	$("#store_category").val(category);
+	$("#store_desc").val(desc);
+	$("#store_tel").val(telephone);
+	$("#store_addr").val(address);
+	$("#store_raddr").val(roadaddr);
+	$("#store_lat").val(lat);
+	$("#store_lon").val(lon);
+	$("#store_wcount1").val(wcount1);
+	$("#store_wcount2").val(wcount2);
+});
+
+$("#storeModBtn").on("click", function() {
+	var storeid = $("#store_id").val();
+	var title = $("#store_title").val();
+	var link = $("#store_link").val();
+	var category = $("#store_category").val();
+	var desc = $("#store_desc").val();
+	var telephone = $("#store_tel").val();
+	var address = $("#store_addr").val();
+	var roadaddr = $("#store_raddr").val();
+	var lat = $("#store_lat").val();
+	var lon = $("#store_lon").val();
+	var wcount1 = $("#store_wcount1").val();
+	var wcount2 = $("#store_wcount2").val();
+	
+	$("#detailModal").modal('hide');
+	
+	$("#modifyModalLabel").html("<b>[" + storeid + " - " + title + "]</b>");
+	$("#store_id_m").val(storeid);
+	$("#store_title_m").val(title);
+	$("#store_link_m").val(link);
+	$("#store_category_m").val(category);
+	$("#store_desc_m").val(desc);
+	$("#store_tel_m").val(telephone);
+	$("#store_addr_m").val(address);
+	$("#store_raddr_m").val(roadaddr);
+	$("#store_lat_m").val(lat);
+	$("#store_lon_m").val(lon);
+	$("#store_wcount1_m").val(wcount1);
+	$("#store_wcount2_m").val(wcount2);
+	$("#modifyModal").modal('show');
+});
+
+$("#storeSaveBtn").on("click", function() {
+	var storeid = $("#store_id_m").val();
+	var title = $("#store_title_m").val();
+	var link = $("#store_link_m").val();
+	var category = $("#store_category_m").val();
+	var desc = $("#store_desc_m").val();
+	var telephone = $("#store_tel_m").val();
+	var address = $("#store_addr_m").val();
+	var roadaddr = $("#store_raddr_m").val();
+	var lat = $("#store_lat_m").val();
+	var lon = $("#store_lon_m").val();
+	var wcount1 = $("#store_wcount1_m").val();
+	var wcount2 = $("#store_wcount2_m").val();
+	
+	$.ajax({
+		type: "put",
+		url: "/stores/upd/" + storeid,
+		headers: {
+			"Content-Type": "application/json",
+			"X-HTTP-Method-Override": "PUT" },
+		dataType: "text",
+		data: JSON.stringify({
+			storeid:storeid,
+			title:title,
+			link:link,
+			category:category,
+			description:desc,
+			telephone:telephone,
+			address:address,
+			roadAddress:roadaddr,
+			lat:lat,
+			lon:lon,
+			wcount1:wcount1,
+			wcount2:wcount2
+		}),
+		success: function(result) {
+			console.log("result: " + result);
+			if(result == "SUCCESS") {
+				$("#modifyModal").modal('hide');
+				alert("수정 되었습니다.");
+				getStoreList_DB();
+			}
+		}
+	});
+});
+
+$("#pagination").on("click", "li", function() {
+	var page = $(this).attr("data-page");
+	
+	getStoreList_Naver(page);
+});
+
+function moveMap(mapx, mapy) {
+	var point = new naver.maps.Point(mapx, mapy);
+	var center = naver.maps.TM128Coord.fromCoordToLatLng(point);
+	var mapOptions = {
+			scaleControl : false,
+			logoControl : false,
+			mapDataControl : false,
+			zoomControl : true,
+		    center: center		    
+		};
+
+	var map = new naver.maps.Map(document.getElementById('map'), mapOptions);
+	
+	var markerOptions = {
+		position: center,
+		map: map,
+		    icon: {
+		        url: '/resources/dist/img/pin_default.png',
+		        size: new naver.maps.Size(22, 35),
+		        origin: new naver.maps.Point(0, 0),
+		        anchor: new naver.maps.Point(11, 35)
+		}
+	};
+
+	var marker = new naver.maps.Marker(markerOptions);
+}
 
 function getStoreList_Naver(page) {
 	var keyword=($("#keyword").val()=="")? "로또판매점" : $("#keyword").val();
@@ -274,7 +543,7 @@ function getStoreList_DB() {
 		str += "</thead>";
 		str += "<tbody>";
 		$(data).each(function() {
-			str += "<tr data-storeid='" + this.storeid + "' data-title='" + this.title + "' data-mapx='" + this.lat + "' data-mapy='" + this.lon + "'>";
+			str += "<tr data-storeid='" + this.storeid + "' data-title='" + this.title + "' data-link='" + this.link + "' data-category='" + this.category + "' data-desc='" + this.description + "' data-telephone='" + this.telephone + "' data-address='" + this.address + "' data-roadaddr='" + this.roadAddress + "' data-lat='" + this.lat + "' data-lon='" + this.lon + "' data-wcount1='" + this.wcount1 + "' data-wcount2='" + this.wcount2 + "'>";
 			str += "<td width=60 class='storeIdTd'><a data-toggle='modal' data-target='#detailModal'>" + this.storeid + "</a></td>";
 			str += "<td>" + this.title + "</td>";
 			str += "<td>" + this.telephone + "</td>";
@@ -323,12 +592,6 @@ function printPaging(pageMaker) {
 function strip_tag(str) {
 	return str.replace(/(<([^>]+)>)/ig,"");
 }
-
-$("#pagination").on("click", "li", function() {
-	var page = $(this).attr("data-page");
-	
-	getStoreList_Naver(page);
-})
 </script>
 
 <%@ include file="../include/footer.jsp" %>

@@ -31,4 +31,9 @@ public class StoreDAOImpl implements StoreDAO {
 		session.delete(namespace + ".remove", storeid);
 	}
 
+	@Override
+	public void update(StoreVO svo) throws Exception {
+		session.update(namespace + ".modify", svo);		
+	}
+
 }

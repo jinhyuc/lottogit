@@ -10,5 +10,7 @@ public interface StoreService {
 	public List<StoreVO> listAll() throws Exception;
 	
 	public void remove(int storeid) throws Exception;
+	
+	public void update(StoreVO svo) throws Exception;
 
 }
