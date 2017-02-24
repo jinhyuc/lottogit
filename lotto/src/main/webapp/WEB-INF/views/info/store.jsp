@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 	
 <%@ include file="../include/header.jsp" %>
-<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=PRALWoKu6D6cm20NNqXP&submodules=geocoder"></script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=PRALWoKu6D6cm20NNqXP&submodules=geocoder,panorama"></script>
 
 	<!-- Page Content -->
 	<div id="page-wrapper">
@@ -16,21 +16,37 @@
 			<!-- /.row -->
 			<div class="row">
 				<div class="col-lg-10">
-					<div id="storemap" style="width:100%;height:500px"></div>
+					<div id="storemap" style="width:100%;height:500px;"></div>
 				</div>
 			</div><br>
-			<div class="row">
-                <div class="col-lg-10">
-                    <div class="well">
-						<dl class="dl-horizontal">
-							<dt>판매점명</dt>
-								<dd>로또 판매점</dd>
-							<dt>전화번호</dt>
-								<dd>02-777-7777</dd>
-						</dl>
+			<!-- <div class="row">
+                <div class="col-lg-4">
+                    <div class="well" id="storeInfo" style="width:100%;height:300px;">
+						
                     </div>
                 </div>
-                <!-- /.col-lg-4 -->
+                <div class="col-lg-6">
+                	<div id="panorama" style="width:100%;height:300px;">
+                	
+                	</div>
+                </div>
+                /.col-lg-4
+            </div><br> -->
+			<div class="row">
+				<div class="well col-lg-10">
+					<div class="media">
+						<div class="col-lg-6">
+							<div id="panorama" class="pull-left" style="width:100%;height:300px;">
+                	
+            				</div>
+            			</div>
+            			<div class="col-lg-4">
+							<div id="storeInfo" class="media-body">
+    		
+          					</div>
+          				</div>
+					</div>
+				</div>
             </div>
 		</div>
 		<!-- /.container-fluid -->
@@ -51,14 +67,28 @@ var mapOptions = {
 
 var map = new naver.maps.Map(document.getElementById('storemap'), mapOptions);
 
+var panoramaOptions = {
+	    position: naver.maps.TM128Coord.fromCoordToLatLng(new naver.maps.Point(316709, 512225)),
+	    size: new naver.maps.Size(800, 600),
+	    pov: {
+	        pan: -135,
+	        tilt: 29,
+	        fov: 100
+	    }
+	};
+
+var pano = new naver.maps.Panorama(document.getElementById("panorama"), {
+    position: naver.maps.TM128Coord.fromCoordToLatLng(new naver.maps.Point(316709, 512225))
+});
+
 var markers = [];
+var storeinfos = [];
+var positions = [];
 
 $(document).ready(function() {
 	getStoreList_DB();
 	
-	for (var i=0, len=markers.length; i<len; i++) {
-	    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
-	}
+	console.log("markers length: " + markers.length);
 });
 
 function getStoreList_DB() {
@@ -67,16 +97,21 @@ function getStoreList_DB() {
 		map.setCenter(first_store);
 		
 		$(data).each(function() {
-			if(this.wcount1 != 0 || this.wcount2 != 0) {
-				printWmarker(this.lat, this.lon);
-			} else {
-				printMarker(this.lat, this.lon);
-			}
-		});	
+			addMarker(this.lat, this.lon, this.wcount1, this.wcount2);
+			addStoreInfo(this.title, this.telephone, this.address, this.wcount1, this.wcount2, this.lat, this.lon);
+		});
+		
+		naver.maps.Event.addListener(map, 'idle', function() {
+		    updateMarkers(map, markers);
+		});
+		
+		for (var i=0, len=markers.length; i<len; i++) {
+		    naver.maps.Event.addListener(markers[i], 'click', getClickHandler(i));
+		}
 	});
 }
 
-function printMarker(mapx, mapy) {
+function addMarker(mapx, mapy, wcount1, wcount2) {
 	var point = new naver.maps.Point(mapx, mapy);
 	var position = naver.maps.TM128Coord.fromCoordToLatLng(point);
 
@@ -90,17 +125,8 @@ function printMarker(mapx, mapy) {
 			        anchor: new naver.maps.Point(11, 35)
 			}
 		};
-
-	var marker = new naver.maps.Marker(markerOptions);
 	
-	markers.push(marker);
-}
-
-function printWmarker(mapx, mapy) {
-	var point = new naver.maps.Point(mapx, mapy);
-	var position = naver.maps.TM128Coord.fromCoordToLatLng(point);
-
-	var markerOptions = {
+	var markerWOptions = {
 			position: position,
 			map: map,
 			    icon: {
@@ -110,14 +136,68 @@ function printWmarker(mapx, mapy) {
 			        anchor: new naver.maps.Point(25, 26)
 			}
 		};
-
-	var marker = new naver.maps.Marker(markerOptions);
+	
+	var marker;
+	
+	if(wcount1 !=0 || wcount2 != 0) {
+		marker = new naver.maps.Marker(markerWOptions);
+	} else {
+		marker = new naver.maps.Marker(markerOptions);
+	}
+	
 	markers.push(marker);
+}
+
+function addStoreInfo(title, telephone, address, wcount1, wcount2, lat, lon) {
+	var storeinfo = [
+						"<div class='span8'>",
+						"<h3><b>" + title + "</b></h3>",
+						"<h5>전화번호: " + telephone + "</h5>",
+						"<h5>주 소: " + address + "</h5>",
+						"<h5>1등 배출 횟수: " + wcount1 + "</h5>",
+						"<h5>2등 배출 횟수: " + wcount2 + "</h5>",
+						"</div>"
+					].join("");
+	storeinfos.push(storeinfo);
+	var storepos = naver.maps.TM128Coord.fromCoordToLatLng(new naver.maps.Point(lat, lon));
+	positions.push(storepos);
+}
+
+function updateMarkers(map, markers) {
+
+    var mapBounds = map.getBounds();
+    var marker, position;
+
+    for (var i = 0; i < markers.length; i++) {
+
+        marker = markers[i]
+        position = marker.getPosition();
+
+        if (mapBounds.hasLatLng(position)) {
+            showMarker(map, marker);
+        } else {
+            hideMarker(map, marker);
+        }
+    }
+}
+
+function showMarker(map, marker) {
+
+    if (marker.setMap()) return;
+    marker.setMap(map);
+}
+
+function hideMarker(map, marker) {
+
+    if (!marker.setMap()) return;
+    marker.setMap(null);
 }
 
 function getClickHandler(seq) {
     return function(e) {
-        alert(seq + "clicked!");
+        $("#storeInfo").html(storeinfos[seq]);
+        
+    	pano.setPosition(positions[seq]);
     }
 }
 </script>
